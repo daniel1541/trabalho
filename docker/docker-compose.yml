@@ -1,0 +1,33 @@
+version: '3'
+services:
+##Container - com o Apache
+  apache_1:
+    image: httpd
+    container_name: apache_1
+    ports:
+      - "80:80"
+
+  apache_2:
+    image: httpd
+    container_name: apache_2
+    ports:
+      - "81:80"
+
+##Container - com tomcat
+  tomcat_1:
+    image: tomcat
+    container_name: node_1
+    ports:
+      - "9090:9090"
+
+  tomcat_2:
+    image: tomcat
+    container_name: node_2
+    ports:
+      - "9091:9090"
+
+##Container - Banco de Dados
+  postgresdb:
+    image: postgres
+    ports:
+      - "5433:5433"

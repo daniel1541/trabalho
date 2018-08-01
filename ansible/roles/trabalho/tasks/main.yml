@@ -1,0 +1,20 @@
+---
+
+- name: 'Criando diretorio DockerFile'
+  file:
+    path: /tmp/DockerFile
+    state: directory
+    mode: 0755
+
+- name: 'Criando diretorio trabalho'
+  file:
+    path: /tmp/DockerFile/trabalho
+    state: directory
+    mode: 0755
+
+
+- name: 'Git clone'
+  shell: cd /tmp/DockerFile && git clone URL
+
+- name: 'Rodar docker compose'
+  shell: cd /tmp/DockerFile/trabalho && docker-compose up -d
