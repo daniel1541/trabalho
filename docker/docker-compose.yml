@@ -3,20 +3,22 @@ services:
 ##Container - com o Apache
   apache_1:
     image: httpd
-    copy:
-        - ./index.html:/user/local/apache2/htdocs/espec-iac/
+    volumes:
+      - ./index.html:/var/www/html/
     container_name: apache_1
     ports:
       - "80:80"
 
   apache_2:
     image: httpd
-    copy:
-        - ./index.html:/user/local/apache2/htdocs/espec-iac/
+    volumes:
+      - ./index.html:/var/www/html/
     container_name: apache_2
     ports:
       - "81:80"
 
+# copy:
+#    - ./index.html:/user/local/apache2/htdocs/espec-iac/
 ##Container - com tomcat
   tomcat_1:
     image: tomcat
