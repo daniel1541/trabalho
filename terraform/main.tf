@@ -1,6 +1,6 @@
 provider "aws" {
-    access_key = "AKIAIAP3SWLG2KN42XSQ"
-    secret_key = "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"
+    access_key = ""
+    secret_key = ""
     region = "us-east-1"
 }
 resource "aws_instance" "docker" {
