@@ -1,2 +1,2 @@
-[server]
-184.73.73.109 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/zeus/git/trabalho/ansible/key_terraform.pem
+[teste]
+54.84.52.109 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/tmp/trabalho/ansible/key_terraform.pem ansible_python_interpreter=/usr/bin/python3

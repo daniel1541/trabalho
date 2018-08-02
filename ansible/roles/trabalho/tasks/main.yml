@@ -9,14 +9,14 @@
 - name: 'Usando Usuario root'
   shell: sudo su
 
-- name: 'entrando no diretorio do Docker'
-  shell: cd /tmp/Docker
+#- name: 'Git Clone'
+#  shell: sudo git clone https://github.com/daniel1541/trabalho.git
 
-- name: 'Iniciando o Git'
-  shell: sudo git init
-
-- name: 'Git Clone'
-  shell: sudo git clone https://github.com/daniel1541/trabalho.git
+- git:
+    repo: https://github.com/daniel1541/trabalho.git
+    dest: /tmp/Docker
+    clone: yes
+    update: no
 
 - name: 'Rodando Docker Compose'
-  shell: cd /tmp/Docker/trabalho/docker && docker-compose up -d
+  shell: cd /tmp/Docker/docker && docker-compose up -d
