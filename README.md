@@ -12,6 +12,7 @@ ADD a chave do usuario de acesso da AWS.
 - execulte o comando "terraform init"
 - execulte o comando "terraform plan"
 - execulte o comando "terraform apply"
+- Execulte o comando "chmod 600" na chave dentro do direotio: /ansible/key_terraform.pem
 - Espera o processo concluir e copie o IP gerado para dentro do arquivo: /trabalho/ansible/hosts
 - Entrei no diretorio do ansible: "cd ansible" 
 - execulte o comando "ansible-playbook -i hosts playbook.yml"
