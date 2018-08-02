@@ -1,6 +1,6 @@
 provider "aws" {
-    access_key = ""
-    secret_key = ""
+    access_key = "AKIAIAP3SWLG2KN42XSQ"
+    secret_key = "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"
     region = "us-east-1"
 }
 resource "aws_instance" "docker" {
@@ -41,9 +41,52 @@ resource "aws_security_group" "sec-group" {
   }
 
   ingress {
+    from_port = "${var.apache_1}"
+    to_port = "${var.apache_1}"
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port = "${var.apache_2}"
+    to_port = "${var.apache_2}"
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port = "${var.tomcat_1}"
+    to_port = "${var.tomcat_1}"
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port = "${var.tomcat_2}"
+    to_port = "${var.tomcat_2}"
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port = "${var.postgresdb}"
+    to_port = "${var.postgresdb}"
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     from_port = 8
     to_port = 0
     protocol = "icmp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  egress {
+    from_port = "${var.https}"
+    to_port = "${var.https}"
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
 }
