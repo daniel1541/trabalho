@@ -16,3 +16,10 @@ ADD a chave do usuario de acesso da AWS.
 - Entrei no diretorio do ansible: "cd ansible" 
 - execulte o comando "ansible-playbook -i hosts playbook.yml"
 
+Participantes:
+
+Daniel Queiroz
+Valtemberg Soares
+Samuel Soares
+Afro Vasconcelos
+Denys Ledislau (Fez cirugia e não pode participar da apresentanção, mas ajudou na configuração)
