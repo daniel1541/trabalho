@@ -1,4 +1,4 @@
-# trabalho
+Segue Rotina de execução. 
 
 - Instalar "terraform"
     URL: https://www.terraform.io/intro/getting-started/install.html
@@ -16,11 +16,3 @@ ADD a chave do usuario de acesso da AWS.
 - Espera o processo concluir e copie o IP gerado para dentro do arquivo: /trabalho/ansible/hosts
 - Entrei no diretorio do ansible: "cd ansible" 
 - execulte o comando "ansible-playbook -i hosts playbook.yml"
-
-Participantes:
-
-Daniel Queiroz
-Valtemberg Soares
-Samuel Soares
-Afro Vasconcelos
-Denys Ledislau (Fez cirugia e não pode participar da apresentanção, mas ajudou na configuração)
